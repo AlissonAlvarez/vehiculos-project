@@ -1,0 +1,8 @@
+# Activar el motor de reescritura de URLs
+RewriteEngine On
+
+# Establece la ruta base de tu proyecto (ajústala si es necesario)
+RewriteBase /proyectos/vehiculos-project/
+
+# Redirige URLs limpias tipo /inicio o /catalogo
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ Controlador/Controlador.php?accion=$1 [L,QSA]
